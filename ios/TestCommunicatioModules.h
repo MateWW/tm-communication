@@ -3,6 +3,7 @@
 #import "RNTestCommunicatioModulesSpec.h"
 
 @interface TestCommunicatioModules : NSObject <NativeTestCommunicatioModulesSpec>
+
 #else
 #import <React/RCTBridgeModule.h>
 

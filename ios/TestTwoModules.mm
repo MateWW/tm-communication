@@ -18,7 +18,7 @@ RCT_EXPORT_MODULE("TestTwoModules")
 - (std::shared_ptr<facebook::react::TurboModule>)getTurboModule:
     (const facebook::react::ObjCTurboModule::InitParams &)params
 {
-    return std::make_shared<facebook::react::NativeTestCommunicatioModulesSpecJSI>(params);
+    return std::make_shared<facebook::react::NativeTestTwoModulesSpecJSI>(params);
 }
 #endif
 

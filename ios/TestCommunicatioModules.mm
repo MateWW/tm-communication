@@ -3,12 +3,11 @@
 #import "RCTImageLoaderWithAttributionProtocol.h"
 
 @implementation TestCommunicatioModules
-RCT_EXPORT_MODULE()
+RCT_EXPORT_MODULE("TestCommunicatioModules")
 
 @synthesize moduleRegistry = _moduleRegistry;
 
 - (NSNumber *)multiply:(double)a b:(double)b {
-//    TestTwoModules* module = [_moduleRegistry moduleForName:"TestTwoModules"];
     TestTwoModules* _module = [_moduleRegistry moduleForName:"TestTwoModules"];
     NSNumber *result = @(a * [_module a] * b * [_module b]);
     return result;

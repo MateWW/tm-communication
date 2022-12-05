@@ -3,6 +3,6 @@ const TestCommunicatioModules =
 const TestModules = require('./NativeTestTwoModules').default;
 
 export function multiply(a: number, b: number): number {
-  TestModules.multiply(10, 10);
-  return TestCommunicatioModules.multiply(1, 2);
+  // TestModules.setMultiplicate(10, 10);
+  return TestCommunicatioModules.multiply(a, b);
 }

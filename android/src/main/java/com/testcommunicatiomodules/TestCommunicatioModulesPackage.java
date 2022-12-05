@@ -18,6 +18,8 @@ public class TestCommunicatioModulesPackage extends TurboReactPackage {
   public NativeModule getModule(String name, ReactApplicationContext reactContext) {
     if (name.equals(TestCommunicatioModulesModule.NAME)) {
       return new TestCommunicatioModulesModule(reactContext);
+    } else if(name.equals(TestTwoModulesModule.NAME)) {
+      return new TestTwoModulesModule(reactContext);
     } else {
       return null;
     }
@@ -38,6 +40,17 @@ public class TestCommunicatioModulesPackage extends TurboReactPackage {
                       false, // isCxxModule
                       true // isTurboModule
       ));
+      moduleInfos.put(
+        TestTwoModulesModule.NAME,
+        new ReactModuleInfo(
+          TestTwoModulesModule.NAME,
+          TestTwoModulesModule.NAME,
+          false, // canOverrideExistingModule
+          false, // needsEagerInit
+          true, // hasConstants
+          false, // isCxxModule
+          true // isTurboModule
+        ));
       return moduleInfos;
     };
   }

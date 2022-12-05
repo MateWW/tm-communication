@@ -5,7 +5,7 @@
 RCT_EXPORT_MODULE("TestTwoModules")
 
 
-- (NSNumber *)multiply:(double)a b:(double)b {
+- (NSNumber *)setMultiplicate:(double)a b:(double)b {
     self.a = a;
     self.b = b;
     NSNumber *result = @(a * b);

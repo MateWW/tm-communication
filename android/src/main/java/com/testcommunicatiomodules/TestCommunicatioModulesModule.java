@@ -24,6 +24,7 @@ public class TestCommunicatioModulesModule extends NativeTestCommunicatioModules
   // See https://reactnative.dev/docs/native-modules-android
   @Override
   public double multiply(double a, double b) {
-    return a * b;
+    TestTwoModulesModule module = this.getReactApplicationContext().getNativeModule(TestTwoModulesModule.class);
+    return a * b * module.a * module.b;
   }
 }
